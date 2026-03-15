@@ -1,26 +1,45 @@
-# Shopify Hydrogen E-Commerce Storefront
+# FCS Clothing — Shopify Hydrogen Storefront
 
-This repository serves as a public showcase for a headless e-commerce project built with **Shopify Hydrogen** and **Remix**. 
+This repository is a public showcase for the **FCS Clothing** headless e-commerce platform. While the full production codebase—including custom collection logic, cart management, and CI/CD configurations—is maintained in a private repository for IP protection, this mirror demonstrates the core architectural patterns and lead-capture systems used in the project.
 
-## 🔗 Live Demo
-[**Click Here to View the Live Site**](https://fcs.clothing)
+## 🔗 Live Environment
+[**https://fcs.clothing**](https://fcs.clothing)  
+*Current Status: Pre-launch / Lead Generation Phase*
+
+---
+
+## 🛠 Tech Stack
+* **Framework:** [Shopify Hydrogen](https://hydrogen.shopify.dev/) (Remix-based)
+* **API:** Shopify Admin & Storefront GraphQL APIs
+* **Styling:** Tailwind CSS / CSS-in-JS
+* **Hosting:** Shopify Oxygen (Edge Deployment)
+
+## 🏗 Key Features (Showcased)
+### 1. Secure Server-Side Actions
+The showcased entry point demonstrates secure form processing. It utilizes Remix `ActionFunctionArgs` to keep API interactions on the server, ensuring that **Private Admin Tokens** are never exposed to the client-side bundle.
+
+[Image of a sequence diagram for a server-side form submission in Remix]
+
+### 2. GraphQL Mutation Integration
+The signup logic connects directly to the Shopify Admin API to:
+* Validate incoming customer data with Regex.
+* Programmatically create customer profiles in the Shopify backend.
+* Apply marketing tags (`coming-soon-signup`) for automated segmentation.
+
+### 3. Production-Ready UI/UX
+* **Loading States:** Uses `useNavigation` to provide real-time UI feedback during API round-trips.
+* **Error Handling:** Robust validation for email formats and duplicate entry detection (handling Shopify's `userErrors` specifically).
+* **Responsive Design:** A mobile-first, high-performance landing experience with a custom GIF background implementation.
+
+## ⚙️ CI/CD & Infrastructure
+The full project utilizes a professional deployment pipeline:
+* **Automated Staging:** Branch-based preview environments for QA.
+* **Oxygen Deployment:** Leveraging Shopify's global edge network for sub-second page loads.
+* **Environment Management:** Strict separation of Public and Private keys via secure Oxygen secrets.
 
 ---
 
-## 🛠 Project Overview
-This project implements a high-performance storefront utilizing Shopify's Storefront API. To protect proprietary business logic and CI/CD configurations, the full source code remains in a private repository.
+### 🔒 Security Note
+This repository contains a single-entry point for demonstration purposes. All sensitive environment variables (`PRIVATE_ADMIN_API_TOKEN`, `PUBLIC_STORE_DOMAIN`) are managed via secure server-side contexts and are not hardcoded in the source.
 
-### Key Features Implemented:
-* **Server-Side Rendering (SSR):** Optimized with Remix for near-instant page loads.
-* **Hydrogen Components:** Custom implementation of cart, product grids, and search.
-* **CI/CD Pipeline:** Automated deployment to Oxygen with environment-specific staging.
-* **Tailwind Integration:** A fully responsive, mobile-first design system.
-
-## 🚀 Tech Stack
-* **Framework:** Shopify Hydrogen (Remix)
-* **API:** Shopify Storefront API
-* **Styling:** Tailwind CSS
-* **Deployment:** Oxygen (Shopify's Global Edge Hosting)
-
----
-*Note: This public repository contains only the entry point and architecture summary. For inquiries regarding the full implementation or CI/CD workflow, please contact the author.*
+**Developed by George Handyside-Lang**
