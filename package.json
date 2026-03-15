@@ -1,6 +1,6 @@
 {
-  "name": "fcs-headless-hydrogen",
-  "private": true,
+  "name": "fcs-clothing-showcase",
+  "private": false,
   "sideEffects": false,
   "version": "2025.1.7",
   "type": "module",
