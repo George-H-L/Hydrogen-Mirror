@@ -41,8 +41,3 @@ The full project utilizes a professional deployment pipeline:
 
 ### 🔒 Security Note
 This repository contains a single-entry point for demonstration purposes. All sensitive environment variables (`PRIVATE_ADMIN_API_TOKEN`, `PUBLIC_STORE_DOMAIN`) are managed via secure server-side contexts and are not hardcoded in the source.
-
-**Developed by George Handyside-Lang**
-This repository contains a single-entry point for demonstration purposes. All sensitive environment variables (`PRIVATE_ADMIN_API_TOKEN`, `PUBLIC_STORE_DOMAIN`) are managed via secure server-side contexts and are not hardcoded in the source.
-
-**Developed by George Handyside-Lan**
