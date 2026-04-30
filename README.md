@@ -4,7 +4,7 @@ This repository is a public showcase for the **FCS Clothing** headless e-commerc
 
 ## 🔗 Live Environment
 [**https://fcs.clothing**](https://fcs.clothing)  
-*Current Status: Pre-launch / Lead Generation Phase*
+*Current Status: *Live*
 
 ---
 
